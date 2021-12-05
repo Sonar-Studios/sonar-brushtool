@@ -300,6 +300,20 @@ function Brushtool.new(store, plugin)
 								if mode == "Auto" then
 									if object.brushCenterMode == "BoundingBox" then
 										verticalOffset = object.size.y/2
+										
+										local pivotPart = rbxObject
+										
+										if pivotPart.ClassName == "Model" then
+											pivotPart = pivotPart.PrimaryPart
+											
+											local pivotY = -pivotPart.PivotOffset.Position.Y
+											
+											verticalOffset = object.size.y/2 - ( pivotPart.Size.Y/2 - pivotY )
+										else
+											local pivotY = pivotPart.PivotOffset.Position.Y
+
+											verticalOffset = -pivotY
+										end
 									else
 										local primaryPart = rbxObject.PrimaryPart
 										local min, max = Utility.GetPartAABB(primaryPart)

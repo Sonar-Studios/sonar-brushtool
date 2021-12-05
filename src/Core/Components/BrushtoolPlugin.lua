@@ -32,7 +32,7 @@ function BrushtoolPlugin:init(props)
 	if Constants.PLUGIN_THIS_IS_BETA_CHANNEL then
 		self.toolbar = self.plugin:CreateToolbar("Brushtool [BETA CHANNEL]")
 	else
-		self.toolbar = self.plugin:CreateToolbar("Brushtool")
+		self.toolbar = self.plugin:CreateToolbar("Brushtool [SONAR CHANNEL]")
 	end
 	self.brushtoolButton = self.toolbar:CreateButton("Brushtool",
 		"Insert items from the brushtool", Constants.TOOLBAR_ICON)
