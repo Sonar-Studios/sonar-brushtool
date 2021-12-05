@@ -1,0 +1,33 @@
+{
+	"Roblox Asset Id": {
+		"prefix": "rai",
+		"body": [
+			"rbxassetid://"
+		],
+		"description": "Roblox Asset Id"
+	},
+	"Class": {
+		"prefix": [
+			"class"
+		],
+		"body": [
+			"local ${0:$TM_FILENAME_BASE} = {}",
+			"${0:$TM_FILENAME_BASE}.__index = ${0:$TM_FILENAME_BASE}",
+			"",
+			"",
+			"function ${0:$TM_FILENAME_BASE}.new()",
+			"\tlocal self = setmetatable({}, ${0:$TM_FILENAME_BASE})",
+			"\treturn self",
+			"end",
+			"",
+			"",
+			"function ${0:$TM_FILENAME_BASE}:Destroy()",
+			"\t",
+			"end",
+			"",
+			"",
+			"return ${0:$TM_FILENAME_BASE}"
+		],
+		"description": "Lua Class"
+	}
+}

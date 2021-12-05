@@ -1,0 +1,14 @@
+{
+	"name": "sonar-brushtool",
+	"tree": {
+		"$className": "DataModel",
+		"ServerStorage": {
+			"$className": "ServerStorage",
+			"$ignoreUnknownInstances": true,
+			"SonarBrushtool": {
+				"$className": "Folder",
+				"$path": "src"
+			}
+		}
+	}
+}

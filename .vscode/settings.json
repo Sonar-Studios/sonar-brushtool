@@ -1,0 +1,18 @@
+{
+	"rojo.releaseBranch": "7.x",
+	"rojo.pluginManagement": false,
+	"editor.semanticHighlighting.enabled": true,
+	"robloxLsp.diagnostics.enable": false,
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "JohnnyMorganz.stylua",
+	"git.autoRepositoryDetection": false,
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/bower_components": true,
+		"**/*.code-search": true,
+		"**/vendor": true
+	},
+	"git.ignoredRepositories": [
+		"**/vendor"
+	],
+}

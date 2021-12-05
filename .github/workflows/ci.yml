@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - master
+
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  Lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: true
+
+    - name: Foreman Setup
+      uses: Roblox/setup-foreman@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Hush Selene
+      shell: bash
+      run: |
+        selene generate-roblox-std
+
+    # useful for debugging differences between CI and local environment
+    - name: Debug Info
+      shell: bash
+      run: |
+        foreman list
+
+    - name: Lint
+      shell: bash
+      run: |
+        selene src
+
+    - name: Style
+      shell: bash
+      run: |
+        stylua -c src
