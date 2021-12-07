@@ -124,16 +124,11 @@ Constants.SAVE_IMAGE = "rbxassetid://2950300317"
 Constants.PLUGIN_THIS_IS_BETA_CHANNEL = false
 Constants.PLUGIN_BETA_CHANNEL_PRODUCT_ID = 2813601401
 Constants.PLUGIN_PRODUCT_ID = 2268520847
-Constants.PLUGIN_VERSION = semver("2.1.5")
+Constants.PLUGIN_VERSION = semver("2.1.5-sonar")
 
-Constants.STARTER_BRUSHES = {
-	{ model = script.Tree,  guid = "{B0440F6C-5A88-42AE-8B4F-28006D6AE04D}", enabled = true },
-	{ model = script.Grass, guid = "{4488887B-1868-409F-9E3F-7209FA34FAB7}", enabled = false }
-}
+Constants.STARTER_BRUSHES = {}
 
-Constants.STARTER_STAMPS = {
-	{ model = script.CanopyTent, guid = "{EA0887D3-1F39-4F5C-88E9-9C2341526468}", enabled = true }
-}
+Constants.STARTER_STAMPS = {}
 
 Constants.PLUGIN_STORAGE_SCOPE = "Brushtool2_Plugin_Storage"
 

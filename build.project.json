@@ -1,0 +1,6 @@
+{
+	"name": "SonarBrushtool",
+	"tree": {
+		"$path": "src"
+	}
+}

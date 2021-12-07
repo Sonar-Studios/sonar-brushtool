@@ -1,16 +1,12 @@
-name: CI
+name: build
 
 on:
   push:
-    branches:
-    - master
-
-  pull_request:
-    branches:
-    - master
+    tags:
+      - '*'
 
 jobs:
-  Lint:
+  Build:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,23 +20,18 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Hush Selene
-      shell: bash
-      run: |
-        selene generate-roblox-std
-
     # useful for debugging differences between CI and local environment
     - name: Debug Info
       shell: bash
       run: |
         foreman list
 
-    - name: Lint
+    - name: Build
       shell: bash
       run: |
-        selene src
+        rojo build build.project.json --output SonarBrushtool.rbxm
 
-    - name: Style
-      shell: bash
-      run: |
-        stylua -c src
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: SonarBrushtool.rbxm
